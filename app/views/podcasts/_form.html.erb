@@ -1,29 +1,31 @@
-<%= form_for(@podcast) do |f| %>
-  <% if @podcast.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
+<div class="panel-body">
+  <%= form_for(@podcast) do |f| %>
+    <% if @podcast.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@podcast.errors.count, "error") %> prohibited this podcast from being saved:</h2>
 
-      <ul>
-      <% @podcast.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @podcast.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :about %><br>
+      <%= f.text_area :about, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :slug %><br>
+      <%= f.text_field :slug, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Submit", class: "form-control" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><br>
-    <%= f.text_area :about %>
-  </div>
-  <div class="field">
-    <%= f.label :slug %><br>
-    <%= f.text_field :slug %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
