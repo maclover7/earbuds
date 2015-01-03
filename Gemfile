@@ -12,7 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Earbuds Dependencies
-
+gem 'bootstrap-sass'
 
 # Environment Dependencies
 group :development, :test do
