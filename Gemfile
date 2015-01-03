@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+# Rails Dependencies
 gem 'rails', '4.1.7'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -11,9 +11,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
-gem 'sqlite3'
+# Earbuds Dependencies
 
+
+# Environment Dependencies
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'coveralls', require: false
