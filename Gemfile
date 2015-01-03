@@ -13,6 +13,7 @@ gem 'spring',        group: :development
 
 # Earbuds Dependencies
 gem 'bootstrap-sass'
+gem 'devise'
 
 # Environment Dependencies
 group :development, :test do
